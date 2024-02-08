@@ -11,7 +11,7 @@ export const ScrollBox = ({ list, title }: ScrollBoxInterface) => {
   return (
     <ScrollArea className="w-full h-[50vh] rounded-md border">
       <div className="p-4 space-y-4">
-        {list.length == 0 ? (
+        {list.length === 0 ? (
           <p className="text-center">No {title}</p>
         ) : (
           <>
