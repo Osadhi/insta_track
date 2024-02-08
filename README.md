@@ -16,26 +16,28 @@ To run the application locally, follow these steps:
 
 1. Clone this repository:
 
-    ```bash
-    git clone https://github.com/Osadhi/insta_track.git
-    ```
+   ```bash
+   git clone https://github.com/Osadhi/insta_track.git
+   ```
 
 2. Navigate to the project directory:
-    ```bash
-    cd insta_track
-    ```
+   ```bash
+   cd insta_track
+   ```
 3. Install dependencies using npm:
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 4. Start the development server:
-    ```bash
-    npm run dev
-    ```
-Access the application in your browser at http://localhost:3000.
+   `bash
+npm run dev
+`
+   Access the application in your browser at http://localhost:3000.
 
 ## Usage
+
 Upon launching the application, you'll encounter a banner followed by the "Start Tracking" section.
 
 Click "Read Instruction" to review detailed usage guidelines.
@@ -49,6 +51,7 @@ Click "Analyze" to initiate the comparison process.
 Results will be presented in tabs, displaying non-followers and fans respectively.
 
 ## JSON File Format
+
 `follower.json`: Contains a list of your Instagram followers.
 
 `following.json`: Contains a list of Instagram accounts you follow.
@@ -56,7 +59,9 @@ Results will be presented in tabs, displaying non-followers and fans respectivel
 Ensure both files are exported from Instagram and are properly formatted to ensure accurate comparison.
 
 ## Contributing
+
 Contributions are encouraged! Please feel free to open an issue or submit a pull request for suggestions, improvements, or bug fixes.
 
 ## License
+
 This project is licensed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
