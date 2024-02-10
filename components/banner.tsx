@@ -12,12 +12,9 @@ export const Banner = () => {
         <Button asChild variant="secondary">
           <Link href="#tracker">Explore</Link>
         </Button>
-        <Button
-          asChild
-          className="border-none bg-secondary-foreground group/inst"
-        >
+        <Button asChild className="border-none bg-transparent hover:bg-transparent group/inst">
           <Link href="#instructions">
-            See Instruction{"  "}
+            See Instructions{"  "}
             <ChevronRight
               className="group-hover/inst:translate-x-1 ease-in-out duration-300"
               size={16}
