@@ -52,9 +52,9 @@ Results will be presented in tabs, displaying non-followers and fans respectivel
 
 ## JSON File Format
 
-`follower.json`: Contains a list of your Instagram followers.
+`follower.json`: It contains a list of your Instagram followers.
 
-`following.json`: Contains a list of Instagram accounts you follow.
+`following.json`: It contains a list of Instagram accounts you follow.
 
 Ensure both files are exported from Instagram and are properly formatted to ensure accurate comparison.
 
