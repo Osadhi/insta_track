@@ -12,7 +12,10 @@ export const Banner = () => {
         <Button asChild variant="secondary">
           <Link href="#tracker">Explore</Link>
         </Button>
-        <Button asChild className="border-none bg-transparent hover:bg-transparent group/inst">
+        <Button
+          asChild
+          className="border-none bg-transparent hover:bg-transparent group/inst"
+        >
           <Link href="#instructions">
             See Instructions{"  "}
             <ChevronRight
