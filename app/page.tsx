@@ -122,7 +122,7 @@ const UploadPage: React.FC = () => {
             variant="ghost"
             className="group/inst hover:bg-background hover:text-white mb-3"
           >
-            <Link href="#instructions">
+            <Link href="#instructions" className="hover:text-black">
               Read Instruction{"  "}
               <ChevronRight
                 className="group-hover/inst:translate-x-1 ease-in-out duration-300"
