@@ -101,11 +101,7 @@ const Logo = () => {
         >
           <stop offset="0.00728062" stopColor="#0567E4" />
           <stop offset="0.065" stopColor="#6B4CCD" />
-          <stop
-            offset="0.147322"
-            stopColor="#6B4CCD"
-            stopOpacity="0.214388"
-          />
+          <stop offset="0.147322" stopColor="#6B4CCD" stopOpacity="0.214388" />
           <stop offset="0.549562" stopColor="#6B4CCD" stopOpacity="0" />
           <stop offset="1" stopColor="#FB4D43" />
         </linearGradient>
@@ -119,11 +115,7 @@ const Logo = () => {
         >
           <stop offset="0.00728062" stopColor="#0567E4" />
           <stop offset="0.065" stopColor="#6B4CCD" />
-          <stop
-            offset="0.147322"
-            stopColor="#6B4CCD"
-            stopOpacity="0.214388"
-          />
+          <stop offset="0.147322" stopColor="#6B4CCD" stopOpacity="0.214388" />
           <stop offset="0.549562" stopColor="#6B4CCD" stopOpacity="0" />
           <stop offset="1" stopColor="#FB4D43" />
         </linearGradient>
