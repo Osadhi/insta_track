@@ -1,110 +1,67 @@
-import React from "react";
-import { InstructionCard } from "@/components/instruction-card";
-import Link from "next/link";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { Terminal } from "lucide-react";
 
-interface StepInterface {
-  num: number;
-  title: React.JSX.Element | string;
-}
-
-const steps: StepInterface[] = [
-  {
-    num: 1,
-    title: (
-      <div>
-        Navigate to{" "}
-        <Link
-          href="https://accountscenter.instagram.com/info_and_permissions/"
-          className="underline text-blue"
-        >
-          Account Center
-        </Link>
-      </div>
-    ),
-  },
-  {
-    num: 2,
-    title: 'Click "Download your information".',
-  },
-  {
-    num: 3,
-    title: 'Click "Request a download"',
-  },
-  {
-    num: 4,
-    title: 'Select your Account and Click "Next"',
-  },
-  {
-    num: 5,
-    title: 'Click "Select types of information".',
-  },
-  {
-    num: 6,
-    title: 'Click the "Followers and following" field and Click "Next"',
-  },
-  {
-    num: 7,
-    title: 'Select "All time" in Date Range field',
-  },
-  {
-    num: 8,
-    title: "Select JSON in Format field",
-  },
-  {
-    num: 9,
-    title: 'Click "Submit request"',
-  },
-  {
-    num: 10,
-    title: 'Wait until finish Download request and Click "Download"',
-  },
-  {
-    num: 11,
-    title: "Unzip the Downloaded zip file",
-  },
-  {
-    num: 12,
-    title: "Upload JSON files to relevant input fields",
-  },
-];
-
-export const Instructions = () => {
+export default function Instructions() {
   return (
-    <section
-      id="instructions"
-      className="py-6 flex flex-col justify-center items-center"
-    >
-      <h2 className="text-center lg:text-4xl text-3xl pt-6 pb-10">
-        Instructions
-      </h2>
+      <div className="max-w-3xl mx-auto px-4 py-10">
+        <h1 className="text-3xl font-bold mb-6">How to Use Insta-Track</h1>
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Phase 1: Download Your Instagram Data</CardTitle>
+            <CardDescription>Get your official follower data from Instagram</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Accordion type="single" collapsible className="w-full">
+              {[
+                {
+                  step: "Step 1",
+                  title: "Go to Instagram Settings",
+                  content: "Open Instagram → Tap ☰ (menu) → Settings → Accounts Center"
+                },
+                {
+                  step: "Step 2",
+                  title: "Request Your Data",
+                  content: 'Tap "Your information and permissions" → "Download your information" → "Request a download"'
+                },
+                // Add all other steps similarly
+              ].map((item) => (
+                  <AccordionItem key={item.step} value={item.step}>
+                    <AccordionTrigger>
+                      <span className="font-medium mr-2">{item.step}:</span>
+                      {item.title}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      {item.content}
+                    </AccordionContent>
+                  </AccordionItem>
+              ))}
+            </Accordion>
+          </CardContent>
+        </Card>
 
-      <Carousel className="md:w-[80vw] w-[60vw]">
-        <CarouselContent className="">
-          {steps.map((element: StepInterface) => (
-            <CarouselItem
-              key={element.num}
-              className="md:basis-1/2 lg:basis-1/3"
-            >
-              <div className="p-1">
-                <InstructionCard
-                  num={element.num}
-                  title={element.title}
-                  key={element.num}
-                />
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Phase 2: Upload to Insta-Track</CardTitle>
+            <CardDescription>Analyze your follower data</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-medium mb-2">Step 6: Unzip the File</h3>
+                <p className="text-sm text-muted-foreground">
+                  Locate the .zip file (check Downloads or email) and extract the JSON files.
+                </p>
               </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </section>
+
+              <div>
+                <h3 className="font-medium mb-2">Step 7: Upload JSON Files</h3>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
   );
-};
+}
