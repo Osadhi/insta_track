@@ -8,7 +8,7 @@ import { ScrollBox } from "@/components/scroll-box";
 import { Banner } from "@/components/banner";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { Instructions } from "@/components/instructions";
+import Instructions from "@/components/instructions";
 
 interface FollowingInterface {
   relationships_following: [
